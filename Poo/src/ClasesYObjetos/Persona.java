@@ -7,11 +7,11 @@ public class Persona {
     int edad;
     double promedio;
     // el constructor
-    public Persona(String _nombre, String _carrera, int _edad, double _promedio) {
-        nombre = _nombre;
-        carrera = _carrera;
-        edad = _edad;
-        promedio = _promedio;
+    public Persona(String nombre, String carrera, int edad, double promedio) {
+        this.nombre = nombre;
+        this.carrera = carrera;
+        this.edad = edad;
+        this.promedio = promedio;
     }
     
     public void mostrarDatos() {
