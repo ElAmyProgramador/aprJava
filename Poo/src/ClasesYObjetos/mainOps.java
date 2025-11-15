@@ -9,7 +9,7 @@ public class mainOps {
         n1 = Integer.parseInt(JOptionPane.showInputDialog("¿Cuánto vale el número 1?"));
         n2 = Integer.parseInt(JOptionPane.showInputDialog("¿Cuánto vale el número 2?"));
         Operaciones op = new Operaciones();
-        op.sumar(n1, n2);
-        op.mostrarRes();
+        int res = op.sumar(n1, n2);
+        op.mostrarRes(res);
     }
 }

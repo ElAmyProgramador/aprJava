@@ -3,25 +3,23 @@ package ClasesYObjetos;
 import javax.swing.JOptionPane;
 
 public class Operaciones {
-    int res;
-    
-    public void sumar(int a, int b) {
-        res = a + b;
+    public int sumar(int a, int b) {
+        return a + b;
     }
     
-    public void resta(int a, int b) {
-        res = a - b;
+    public int resta(int a, int b) {
+        return a - b;
     }
     
-    public void producto(int a, int b) {
-        res = a * b;
+    public int producto(int a, int b) {
+        return a * b;
     }
     
-    public void division(int a, int b) {
-        res = a / b;
+    public double division(int a, int b) {
+        return a / b;
     }
     
-    public void mostrarRes() {
+    public void mostrarRes(double res) {
         System.out.println("El resultado es: " + res);
     }
 }
