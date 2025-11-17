@@ -3,7 +3,7 @@
 package ClasesYObjetos;
 
 public class Persona {
-    String nombre, carrera;
+    private final String nombre, carrera; // en forma de constantes
     int edad;
     double promedio;
     // el constructor
