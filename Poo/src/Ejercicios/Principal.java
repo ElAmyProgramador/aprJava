@@ -17,12 +17,25 @@ public class Principal {
         return indice;
     } */
     
+    /*
     public static int indiceGanador(Corredor lista[]) {
         double tiempo = lista[0].getTiempoCarrera();
         int indice = 0;
         for(int i = 1; i < lista.length; i++) {
             if (lista[i].getTiempoCarrera() < tiempo) {
                 tiempo = lista[i - 1].getTiempoCarrera();
+                indice = i;
+            }
+        }
+        return indice;
+    } */
+    
+    public static int indiceMayorArea(Triangulo array[]) {
+        int indice = 0;
+        double mayor = array[0].obtenerArea();
+        for (int i = 1; i < array.length; i++) {
+            if (array[i].obtenerArea() > mayor) {
+                mayor = array[i].obtenerArea();
                 indice = i;
             }
         }
@@ -65,6 +78,7 @@ public class Principal {
         System.out.println("El coche mas barato es " + coches[indiceBarato].mostrarDatos());
         */
         
+        /*
         String nombre;
         int numId;
         double tiempo;
@@ -84,5 +98,22 @@ public class Principal {
         }
         int ganador = indiceGanador(corredores);
         System.out.println("Ganó el corredor:\n" + corredores[ganador].mostrarCorredor());
+        */
+        
+        double base, lado;
+        System.out.println("¿Cuantos triangulos hay?");
+        int cantidadTriangulos = teclado.nextInt();
+        Triangulo triangulos[] = new Triangulo[cantidadTriangulos];
+        for (int i = 0; i < triangulos.length; i++) {
+            teclado.nextLine();
+            System.out.println("Informacion del triangulo " + (i + 1));
+            System.out.print("Base: ");
+            base = teclado.nextDouble();
+            System.out.print("Longitud de los lados: ");
+            lado = teclado.nextDouble();
+            triangulos[i] = new Triangulo(base, lado);
+        }
+        int indiceMayorArea = indiceMayorArea(triangulos);
+        System.out.println(triangulos[indiceMayorArea].mostrarTriangulo() + " tiene mayor area");
     }
 }
