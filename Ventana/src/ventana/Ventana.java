@@ -2,6 +2,7 @@ package ventana;
 
 import java.awt.Color; // para poder ponerle color
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Ventana extends JFrame {
@@ -18,5 +19,11 @@ public class Ventana extends JFrame {
         JPanel panelo = new JPanel();
         panelo.setBackground(Color.GREEN); // para cansar la vista
         this.getContentPane().add(panelo);
+        
+        JLabel tik = new JLabel("De repente nada em volta parece ter sentido"); // tambien cuenta tik.setText(String)
+        tik.setForeground(Color.orange);
+        tik.setOpaque(true);
+        tik.setBackground(Color.red);
+        panelo.add(tik);
     }
 }
